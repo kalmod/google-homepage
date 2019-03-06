@@ -1,0 +1,306 @@
+
+html{
+    /*Body looks to its parent (HTML) for how to scale the dynamic property, so the HTML element needs to have it's height set as well.*/
+   height: 100%;
+   } 
+   
+   body {
+     /*However the content of body will probably need to change dynamically. Setting min-height to 100% will accomplish this goal.*/
+     font-family: arial, sans-serif;
+     font-size: 13px;
+     color: #000;
+     margin: 0;
+     min-width: 980px;
+     
+   }
+   
+   
+   
+   
+   #webpage{
+     position: relative;
+     height: 100vh;
+     /*https://web-design-weekly.com/2014/11/18/viewport-units-vw-vh-vmin-vmax/*/
+     min-height: 550px;
+   }
+   
+   #wrap{
+   }
+   
+   #topbar{
+     /*background-color: #FFAACC;*/
+     background-color: #fff;
+     position: absolute;
+     top: 15px;
+     width: 100%;
+     height: 30px;
+   }
+   
+   #mainpage{
+   /*  background-color: #CCFFFF;*/
+     /*https://css-tricks.com/absolute-positioning-inside-relative-positioning/*/
+     width: 100%;
+     position: absolute;
+     top: 45px;
+     min-height: 410px;
+     /*padding-bottom: 35px;*/
+   }
+   
+   #botbar{
+     /*https://medium.freecodecamp.org/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c*/
+     background-color: #f2f2f2;
+     borer-top: 1px solid #e4e4e4;
+     width: 100%;
+     minw-idth: 980px;
+     position: absolute;
+     bottom: 0;
+   
+   }
+   
+   #topleft{
+     display: inline-block;
+     margin: 7px 0 0 10px;
+   }
+   
+   #topright{
+     display:inline-block;
+     position: absolute;
+     right: 0;
+     padding-right: 30px;
+     padding-left: 30px;
+   }
+   
+   .toplinks{
+     color: #000;
+     opacity: 0.75;
+     padding-left: 15px;
+   }
+   
+   .toplinks:link{
+     text-decoration: none;
+   }
+   
+   .toplinks:hover{
+     text-decoration:underline;
+   }
+   
+   .blockimage{
+     display: inline-block;
+     /* It is always display: inline by default. Horizontal margins, and padding on all sides should work without having to change its display property.
+   
+   This remains true even in HTML5. If you are applying styles to an <a> element that contains flow elements or any other elements that are represented in CSS as display: block, you should set the <a> itself to a proper block container type such as block or inline-block for its layout to work as intended. */
+     text-decoration: none;
+     background-image: url('//ssl.gstatic.com/gb/images/i1_1967ca6a.png');
+     width: 30px;
+     height: 30px;
+     background-position: -132px -38px;
+     box-sizing: border-box;
+     vertical-align: middle;
+     border-radius: 2px;
+     opacity: 0.55;
+     margin-left: 15px;
+   }
+   
+   .blockimage:hover{
+     opacity: 1;
+   }
+   
+   .signinbutton{
+     display: inline-block;
+     font-weight: bold;
+     text-decoration: none;
+     vertical-align: middle;
+     border: 1px solid #4285f4;
+     background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+     border-radius: 2px;
+     color: #fff;
+     outline: none;
+     padding: 0px 12px;
+     line-height: 28px;
+     cursor: default;
+     margin-left: 15px;
+   }
+   
+   .signinbutton:active {
+     box-shadow: inset 0 2px 0 rgba(0,0,0,0.15);
+     background: -webkit-linear-gradient(top,#3c7ae4,#3f76d3);
+   }
+   
+   #logo{
+     margin-top: 44px;
+   }
+   
+   .logoimg{
+     /*https://html-online.com/articles/image-align-center/*/
+     display: block;
+     margin: 0 auto 32px auto;
+     padding-top: 109px;
+     height: 92px;
+     width: 272px;
+   }
+   
+   #botleft{
+     display: inline-block;
+   }
+   #botright{
+     display:inline-block;
+     position: absolute;
+     right: 0;
+     margin-right: 30px;
+   }
+   
+   .botlinks{
+     display: inline-block;
+     color: #000;
+     opacity: 0.75;
+     padding-left: 27px;
+       line-height: 40px;
+   
+   }
+   .botlinks:link{
+     text-decoration: none;
+   }
+   .botlinks:hover{
+     text-decoration: underline;
+   }
+   
+   .search{
+     width: 584px;
+     height: 44px;
+     margin: 0 auto;
+     border: none;
+     border-radius: 2px;
+     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+     z-index: 3;
+   }
+   
+   .search:hover{
+     box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+   }
+   
+   .searchbar{
+     white-space: nowrap;
+     /*white-space: nowrap can help prevent divs from wrapping*/
+     height: 45px;
+     padding: 5px 8px 0 16px;
+   
+   }
+   
+   .searchbartext{
+     width: 520px;
+     line-height: 34px;
+     height: 34px;
+     margin: 0;
+     padding: 0;
+     color: rgba(0,0,0,0.87);
+     outline: none;
+     border: none;
+   }
+   
+   .microphone{
+     display: inline-block;
+     width: 24px;
+     height: 44px;
+     cursor: pointer;
+     align-items: center;
+     padding: 0 8px;
+     line-height: 44px;
+     margin-top: -5px;
+   }
+   
+   .microphoneimg{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background-image: url("http://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png");
+    background-size: 100% 100%;
+   /*
+   https://www.w3schools.com/howto/howto_css_tooltip.asp
+   https://www.w3schools.com/css/css_tooltip.asp
+     */
+     
+     position: relative;
+   }
+   
+   /* Tooltip text (This refrences the class microtooltip IN microphoneimg)*/
+   .microphoneimg .microtooltip{
+     visibility: hidden;
+     width: 120px;
+     background-color: #555;
+     color: #fff;
+     font-weight: bold;
+     text-align: center;
+     padding: 5px 0;
+     line-height: 20px;  
+     /* Position the tooltip text */
+     
+     position: absolute;
+     z-index: 1;
+     top: 150%;
+     left: 50%;
+     margin-left: -60px;
+     
+     /* Fade in tooltip */
+     opacity: 0;
+     transition: opacity 0.2s;
+   }
+   
+   /* Tooltip arrow */
+   .microphoneimg .microtooltip::after{
+     content: " ";
+     position: absolute;
+     bottom: 100%;
+     left: 50%;
+     margin-left: -5px;
+     border-width: 5px;
+     border-style: solid;
+     border-color: transparent transparent #555 transparent;
+   
+   }
+   
+   /* Show the tooltip text when you mouse over the tooltip container */
+   .microphoneimg:hover .microtooltip{
+     visibility: visible;
+     opacity: 1;
+   }
+   
+   
+   #sbut{
+     padding-top: 18px;
+     text-align: center;
+   }
+   
+   .gsearch{
+     height: 36px;
+     min-width: 54px;
+     
+     font-family: arial, sans-serif;
+     font-size: 13px;
+   
+     
+     margin: 11px 4px;
+     padding: 0 16px;
+     
+     border-radius: 2px;
+     background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+     background-color: #f2f2f2;
+     border: 1px solid #f2f2f2;
+     
+     color: #757575;
+     
+     cursor: pointer;
+   }
+   
+   .gsearch:hover{
+     background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+     background-color: #f8f8f8;
+     border: 1px solid #c6c6c6;
+     box-shadow: 0 1px 1px rgba(0,0,0, 0.1);
+     color: #222;
+   }
+   
+   .gsearch:focus {
+     outline: none;
+     border: 1px solid #4d90fe;
+   }
